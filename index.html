@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+</head>
+<body>
+
+<style>
+	.container {
+		width: 727px;
+	}
+
+	.beschreibung {
+		width: 727px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+
+	.reihe_1 div, .reihe_n div {
+		width: 101px;
+		padding:5px;
+		float: left;
+	}
+
+	.reihe_n  {
+		height: 50px;
+		padding-top: 10px;
+	}
+
+	.reihe_n .titel-breite, .reihe_1 .titel-breite {
+		width: 162px;
+	}
+
+	.reihe_1 {
+		height: 50px;
+		background-color: #e73e0c;
+		color: white;
+		margin-bottom: 5px;
+	}
+
+	.container > .reihe_n:hover + .beschreibung, .reihe_n:hover, .beschreibung:hover {
+		background-color: #db613f;
+		color: #282828;
+	}
+
+	.open_beschreibung{
+		text-align: center;
+	}
+
+	.beschreibung_text {
+		display: none;
+	}
+
+	.reihe_gerade {
+		background-color: #eda490;
+	}
+
+	.reihe_ungerade {
+		background-color: #edb5a6;
+	}
+
+	.red {
+		background-color: #db613f;
+		color:#282828;
+	}
+
+	a {
+		text-transform: uppercase;
+	}
+
+</style>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.beschreibung').hover(function() {
+			$(this).prev().addClass('red');
+		}, function() {
+			$(this).prev().removeClass('red');
+		});
+	});
+</script>
+<script>
+<!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+	};
+</script>
+<div class="container">
+	<div class="reihe_1">
+		<div>Zeit</div>
+		<div class="titel-breite">Titel</div>
+		<div>Dozent</div>
+		<div>???</div>
+		<div>Ort</div>
+		<div>Ausarbeitung</div>
+	</div>
+	<div class="reihe_n reihe_gerade">
+		<div>09:45-10:00</div>
+		<div class="titel-breite">Brustschwimmen in heterogenen Gruppen</div>
+		<div>Maike Elbracht</div>
+		<div>P/SI/SII/BK</div>
+		<div>Uni-Schwimmbad</div>
+		<div>PDF</div>
+	</div>
+	<div class="beschreibung reihe_gerade">	
+		<div class="open_beschreibung">
+			<a href="#" onclick="toggle_visibility('beschreibung_text1')">Kurzbeschreibung öffnen</a>
+		</div>
+		<div class="beschreibung_text" id="beschreibung_text1">
+			Obwohl das Brustschwimmen die koordinativ anspruchsvollste Schwimmtechnik ist, erlernen Kinder und Jugendliche im deutschsprachigen Raum diese als Erstes. Aus diesem Grund finden sich in den verschiedenen Lerngruppen vielfältige Fehlerbilder, aber auch die entstehende Bandbreite der Heterogenität stellt die Lehrkraft oft vor eine große Herausforderung. Daher soll in diesem Workshop aufgezeigt werden, welche Möglichkeiten der FehlerKorrektur es gibt und wie sie methodisch in der Lerngruppe umgesetzt werden kann. Dieses methodische Vorgehen kann auf jede Schwimmtechnik und jede Lerngruppe, altersentsprechend abgewandelt, angewendet werden.
+		</div>
+	</div>
+	<div class="reihe_n reihe_ungerade">
+		<div>09:45-10:00</div>
+		<div class="titel-breite">Brustschwimmen in heterogenen Gruppen</div>
+		<div>Maike Elbracht</div>
+		<div>P/SI/SII/BK</div>
+		<div>Uni-Schwimmbad</div>
+		<div>PDF</div>
+	</div>
+	<div class="beschreibung reihe_ungerade">	
+		<div class="open_beschreibung">
+			<a href="#" onclick="toggle_visibility('beschreibung_text2')">Kurzbeschreibung öffnen</a>
+		</div>
+		<div class="beschreibung_text" id="beschreibung_text2">
+			Obwohl das Brustschwimmen die koordinativ anspruchsvollste Schwimmtechnik ist, erlernen Kinder und Jugendliche im deutschsprachigen Raum diese als Erstes. Aus diesem Grund finden sich in den verschiedenen Lerngruppen vielfältige Fehlerbilder, aber auch die entstehende Bandbreite der Heterogenität stellt die Lehrkraft oft vor eine große Herausforderung. Daher soll in diesem Workshop aufgezeigt werden, welche Möglichkeiten der FehlerKorrektur es gibt und wie sie methodisch in der Lerngruppe umgesetzt werden kann. Dieses methodische Vorgehen kann auf jede Schwimmtechnik und jede Lerngruppe, altersentsprechend abgewandelt, angewendet werden.
+		</div>
+	</div>
+	<div class="reihe_n reihe_gerade">
+		<div>09:45-10:00</div>
+		<div class="titel-breite">Brustschwimmen in heterogenen Gruppen</div>
+		<div>Maike Elbracht</div>
+		<div>P/SI/SII/BK</div>
+		<div>Uni-Schwimmbad</div>
+		<div>PDF</div>
+	</div>
+	<div class="beschreibung reihe_gerade">	
+		<div class="open_beschreibung">
+			<a href="#" onclick="toggle_visibility('beschreibung_text3')">Kurzbeschreibung öffnen</a>
+		</div>
+		<div class="beschreibung_text" id="beschreibung_text3">
+			Obwohl das Brustschwimmen die koordinativ anspruchsvollste Schwimmtechnik ist, erlernen Kinder und Jugendliche im deutschsprachigen Raum diese als Erstes. Aus diesem Grund finden sich in den verschiedenen Lerngruppen vielfältige Fehlerbilder, aber auch die entstehende Bandbreite der Heterogenität stellt die Lehrkraft oft vor eine große Herausforderung. Daher soll in diesem Workshop aufgezeigt werden, welche Möglichkeiten der FehlerKorrektur es gibt und wie sie methodisch in der Lerngruppe umgesetzt werden kann. Dieses methodische Vorgehen kann auf jede Schwimmtechnik und jede Lerngruppe, altersentsprechend abgewandelt, angewendet werden.
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>
